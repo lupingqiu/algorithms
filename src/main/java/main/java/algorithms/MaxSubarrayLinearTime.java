@@ -9,7 +9,6 @@ public class MaxSubarrayLinearTime {
 
 	/**
 	 * n^2
-	 * 最优
 	 * @param a
 	 * @return
 	 */
@@ -41,6 +40,7 @@ public class MaxSubarrayLinearTime {
 	
 	/**
 	 * 最优线性算法
+	 * 最优
 	 * n
 	 * @param a
 	 * @return
