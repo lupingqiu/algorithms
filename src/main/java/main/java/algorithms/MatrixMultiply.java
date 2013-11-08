@@ -229,24 +229,12 @@ public class MatrixMultiply {
 		double[][] c21=MatrixMultiply.plusMatrix(p3,p4);
 		double[][] c22=MatrixMultiply.minusMatrix(MatrixMultiply.plusMatrix(p5,p1),MatrixMultiply.plusMatrix(p3, p7));
 		//举证赋值，未找到合适的方法
-		for(int i=0;i<c11.length;i++){
-			for(int j=0;j<c11[0].length;j++){
+		for(int i=0;i<a.getN()/2;i++){
+			for(int j=0;j<a.getN()/2;j++){
 				c[i][j]=c11[i][j];
-			}
-		}
-		for(int i=0;i<c12.length;i++){
-			for(int j=0;j<c12[0].length;j++){
-				c[i][c11[0].length+j]=c12[i][j];
-			}
-		}
-		for(int i=0;i<c21.length;i++){
-			for(int j=0;j<c21[0].length;j++){
-				c[c11.length+i][j]=c21[i][j];
-			}
-		}
-		for(int i=0;i<c22.length;i++){
-			for(int j=0;j<c22[0].length;j++){
-				c[c11.length+i][c11[0].length+j]=c22[i][j];
+				c[i][a.getN()/2+j]=c12[i][j];
+				c[a.getN()/2+i][j]=c21[i][j];
+				c[a.getN()/2+i][a.getN()/2+j]=c22[i][j];
 			}
 		}
 		return c;

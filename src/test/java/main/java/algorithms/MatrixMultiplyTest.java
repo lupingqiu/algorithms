@@ -32,8 +32,8 @@ public class MatrixMultiplyTest extends TestCase {
 	}
 	
 	public void testStrassens(){
-		a=MatrixMultiply.buildMatrix(512, 512);
-		b=MatrixMultiply.buildMatrix(512, 512);
+		a=MatrixMultiply.buildMatrix(5, 5);
+		b=MatrixMultiply.buildMatrix(5, 5);
 		int n = MatrixMultiply.getN(a, b);
 		double[][] an=MatrixMultiply.invertToNN(a, n);
 		double[][] bn=MatrixMultiply.invertToNN(b, n);
